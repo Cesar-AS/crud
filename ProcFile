@@ -1,1 +1,1 @@
-web: gunicorn crud.wgsi
+web: gunicorn dep:ap
