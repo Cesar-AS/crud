@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div class="form">
+        <div>
+            <form method='POST'>
+                {% csrf_token %}
+                <h2>Tem certeza que deseja remover o produto {{ produto.descricao }}?</h2>
+                <button class="btn_conf" type='submit'>Confirmar</button>
+           </form>
+        </div>       
+    </div>
+
+  
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    {% if produto %}
+        <h1>Editar Produto</h1>
+    {% else %}
+        <h1>Novo Produto</h1>
+    {% endif %}
+
+   <div class="wrapper">
+       <div class="form">
+            <form method='POST'>
+            {% csrf_token %}
+            <div class="input_fields">
+                {% for field in form %}
+                    {{ field }}     
+                {% endfor %}
+            </div> 
+            <div>
+                <button id="btn_conf" type='submit'>Salvar</button>
+            </div>
+            
+        </form>
+       </div>
+        
+   </div>
+   
+
+{% endblock %}
